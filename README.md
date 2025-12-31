@@ -23,16 +23,16 @@ algorithms
 : reference notebooks that develop & present re-usable algorithms and/or data structures
 that are re-used in the lessons, labs, or projects.
 
-*Note*: for simplicity, rather than trying to `import` these as modules, 
-         simply copy-paste what you need into the notebook you are working in.
-
-### solutions
+### sample solutions
 Sample solutions completed in class and lab.
 This folder is for the **instructor** to post solutions.  
 Modifying or saving files to this folder can cause "merge conflicts" - please don't.
 
 
 ## Instructor's Branch Strategy
+
+These instructions are for Course Instructors, not students.
+Student Instructions are detailed in **Lab 1**
 
 _Problem_
 : retain term history in repo, ideally a branch for each semester.
@@ -56,8 +56,8 @@ _Ideal Solution_
 _Process_
 
 1. start of term:
-    * create a `semester` branch from `template` (`git checkout -b 2024.01 template`; `git push origin 2024.01`)
-    * make the `2024.01` branch the `default` on GH
+    * create a `semester` branch from `template` (`git checkout -b 202x.01 template`; `git push origin 202x.01`)
+    * make the `202x.01` branch the `default` on GH (project settings)
     * consider removing any `solutions` from previous term's branch to a private local branch
 1. student fork; create `main` branch; set it to `default`; work in `main` branch for production (current term):
     * students open lab assignments, exercises, and examples from `main`
