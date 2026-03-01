@@ -1,0 +1,132 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyORaH5cHEmLfzXyM7D0CjRL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/bobisawsome1/cap-comp215/blob/main/Project%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Small Landuage Model Project\n",
+        "\n",
+        "Author: Nicholas Mason\n",
+        "\n",
+        "March 2, 2026"
+      ],
+      "metadata": {
+        "id": "QCcWw_eK3Yk3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "ieyuJPtf4xT5"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "bQZtWqBq3XUf",
+        "outputId": "405ebc14-7372-41b5-ec30-4568a93a4f3f"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{('This', 'is'): 'a',\n",
+              " ('is', 'a'): 'test',\n",
+              " ('a', 'test'): 'file',\n",
+              " ('test', 'file'): 'for',\n",
+              " ('file', 'for'): 'an',\n",
+              " ('for', 'an'): 'input',\n",
+              " ('an', 'input'): 'of',\n",
+              " ('input', 'of'): 'text',\n",
+              " ('of', 'text'): 'that',\n",
+              " ('text', 'that'): 'i',\n",
+              " ('that', 'i'): 'hope',\n",
+              " ('i', 'hope'): 'will',\n",
+              " ('hope', 'will'): 'be',\n",
+              " ('will', 'be'): 'used',\n",
+              " ('be', 'used'): 'to',\n",
+              " ('used', 'to'): 'create',\n",
+              " ('to', 'create'): 'outputs',\n",
+              " ('create', 'outputs'): 'for',\n",
+              " ('outputs', 'for'): 'a',\n",
+              " ('for', 'a'): 'language',\n",
+              " ('a', 'language'): 'prediction',\n",
+              " ('language', 'prediction'): 'system'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ],
+      "source": [
+        "#Createing a dictionary\n",
+        "def create_dictionary(filename):\n",
+        "  '''Take a file of text and create a diction ary that will be used topredict the next word is a sequence'''\n",
+        "\n",
+        "  #Open the file and create a list with each word\n",
+        "  input_text = open(filename, 'r').readline()\n",
+        "  text_words = input_text.split()\n",
+        "\n",
+        "  dictionary = {}\n",
+        "\n",
+        "  #Loop through our text and\n",
+        "  for i in range(0, len(text_words) - 2):\n",
+        "    dictionary[(text_words[i], text_words[i + 1])] = text_words[i + 2]\n",
+        "\n",
+        "  #return our dictionary with all the pairs of prediction\n",
+        "  return dictionary\n",
+        "\n",
+        "create_dictionary('test.txt')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Predicting next words\n",
+        "def next_word_prediction(word_1, word_2, word_dictionary):\n",
+        "  '''Take an input of 2 words and a dictionary of next word predictions and returns the next word to be predicted'''\n",
+        "\n",
+        ""
+      ],
+      "metadata": {
+        "id": "3ihmDnXp7xXO"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
